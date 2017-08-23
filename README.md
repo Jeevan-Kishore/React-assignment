@@ -3,7 +3,7 @@
 - Babel transpiler integration
 - Webpack Dev Server with React Hot Loader
 - Prebuilt filestructure and React templates
-- Bootstrap 3
+- Bootstrap 4 alpha
 
 ## Webpack Loaders
 - URL
