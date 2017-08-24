@@ -17,11 +17,23 @@ module.exports = {
 	devtool: debug ? "inline-sourcemap" : false,
 	plugins: debug ? [
 		// Development plugins (Edit to your liking)
-		new WriteFilePlugin()
+		new WriteFilePlugin(),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery",
+            Popper: ['popper.js', 'default']
+        })
 	] : [
 		// Production plugins (Edit to your liking)
 		new webpack.optimize.OccurrenceOrderPlugin(),
 		new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery",
+            Popper: ['popper.js', 'default']
+        })
 	],
 	module: {
 		loaders: [
