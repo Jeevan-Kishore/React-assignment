@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build": "npm run clean && NODE_ENV=production ./node_modules/.bin/webpack",
-    "dev": "npm run clean && ./node_modules/.bin/webpack-dev-server --content-base app --inline --hot",
+    "dev": "npm run clean && ./node_modules/.bin/webpack-dev-server --content-base app --inline --hot --port 8081",
     "clean": "echo Cleaning build directory... && rm -f ./app/js/*.hot-update.js ./app/js/*.hot-update.json && echo Running webpack..."
   },
   "author": "Jeevan Kishore",
@@ -37,11 +37,16 @@
     "react",
     "bootstrap",
     "webpack",
-    "babel",
-    "boilerplate"
+    "babel"
   ],
   "bugs": {
     "url": "https://github.com/Jeevan-Kishore/React-assignment/issues"
   },
-  "homepage": "https://github.com/Jeevan-Kishore/React-assignment"
+  "homepage": "https://github.com/Jeevan-Kishore/React-assignment",
+  "dependencies": {
+    "fuse-js-latest": "^2.6.2",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.3",
+    "react-star-rating": "^1.4.2"
+  }
 }
